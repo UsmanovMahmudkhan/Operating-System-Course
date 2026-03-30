@@ -15,6 +15,9 @@ This guide provides step-by-step instructions for students to create two virtual
 
 ## Part 1: Setting up the Virtual Machines
 
+*Below is an overview of the assigned resources for both the Ubuntu and CentOS Virtual Machines once configuration is complete:*
+![Virtual Machines Resources Overview](/Users/mahmudkhonusmonov/Presentations/OS_Assignment1_Repo/images/step0.png)
+
 ### Step 1: Prepare Your Environment
 Ensure you have downloaded the necessary ISO disk images for the operating systems. Launch VirtualBox to begin creating the virtual machines.
 
@@ -45,6 +48,8 @@ Configure the initial settings:
 - Customize the storage sizing.
 - Set up user credentials (username and password). 
 *Note: Setting these correctly is critical for logging in and administering the CentOS server later.*
+
+![Installing CentOS](/Users/mahmudkhonusmonov/Presentations/OS_Assignment1_Repo/images/step2.png)
 
 ---
 
@@ -78,6 +83,8 @@ To allow Ubuntu to accept and initiate encrypted remote connections, use the `ap
 sudo apt update
 sudo apt install openssh-server openssh-client
 ```
+
+![Installing OpenSSH on Ubuntu](/Users/mahmudkhonusmonov/Presentations/OS_Assignment1_Repo/images/step6_2.png)
 
 ### Step 13: Connect from Host PC to Ubuntu VM
 Test your setup by connecting to the Ubuntu VM from the host PC over SSH:
@@ -131,6 +138,8 @@ ssh username@<centos-ip-address>
 *(Replace `username` with your CentOS user, and `<centos-ip-address>` with the IP noted in Step 17).*
 Enter the correct CentOS password when prompted to log in remotely.
 
+![Ubuntu to CentOS Connection Request](/Users/mahmudkhonusmonov/Presentations/images/step18_auto_2.png)
+
 ### Step 19: Verify Communication Between VMs
 With the connection established, provide definitive proof of administrative access. Run basic Linux file manipulation commands remotely over the connection to alter the CentOS filesystem, such as:
 ```bash
@@ -138,6 +147,8 @@ touch hello_from_ubuntu.txt
 ls -l
 ```
 This final action demonstrates full control over the network link and completes the practical setup.
+
+![Ubuntu to CentOS Connection Verification](/Users/mahmudkhonusmonov/Presentations/images/step19_auto.png)
 
 ---
 
